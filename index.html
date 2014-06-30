@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>marks phone gap application</title>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+
+
+</head>
+
+<body>
+
+
+
+<link rel="stylesheet" href="css/MobileAppStyle.css">
+<style type="text/css" media="all">@import "themes/apple/theme.css";</style>
+
+
+
+<script type="text/javascript" charset="utf-8" src="js/jquery/jquery-1.4.4-hicVersion-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/plugins/livequery/jquery.livequery-1.0.3.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/plugins/add2home/add2home.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/hicTech/appManager.js"></script>
+
+
+<script>
+function appMLReady(){
+
+    // overlay demo
+    $('#overlay_alert').bind('click', function(e, data){
+    	appML.appManagerShowDialog({message:"ddd",title:"Alert"});
+    });
+ 
+}
+
+</script>
+
+</head>
+
+<body data-appml-onload="appMLReady()">
+
+<appml>
+	<loading></loading>
+	
+	<content>
+	
+		<navigation height="44px"></navigation>
+        
+        
+        
+		<panel id="features" title="Panel Title Here" data-appml-icon="00-appML.png">
+		
+			<page id="list" title="homeTitle">
+				
+				
+				<ul>
+					<li class="box_title">Box Title</li>
+					<li class="arrow"><a href="#id_list1">Back button titling</a></li>
+					<li class="arrow"><a href="#" id="overlay_alert">Alert</a></li>
+					 
+				</ul>
+				
+				
+				
+			</page>
+		
+			<page id="id_list1"  title="First">
+				<h2>First paragraph</h2>
+				<ul >
+					<li class="arrow"><a href="#id_list2">goto 2nd</a></li>
+				</ul>
+			</page> 
+			 
+		
+		</panel>
+		
+		
+		
+		<panel id="carousel" title="Carousel" data-appml-icon="42-photos.png">
+			
+            <page>
+			<iframe src="http://bing.com" style="width:100%;height:100%;"></iframe>
+			</page>
+            
+		</panel>
+        
+        
+        <toolbar></toolbar>
+
+	</content>
+
+</appml>
+ 
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+ 
+</body>
+</html>
